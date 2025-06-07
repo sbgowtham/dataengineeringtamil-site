@@ -22,6 +22,7 @@
     }
     h1 {
       font-size: 2.5rem;
+      margin-top: 80px;
       margin-bottom: 0.5rem;
     }
     .tagline {
@@ -30,9 +31,9 @@
       margin-bottom: 1.5rem;
     }
     .stats {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
       font-size: 0.9rem;
       background: rgba(255, 255, 255, 0.1);
       padding: 10px 15px;
@@ -40,6 +41,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      z-index: 1000;
     }
     .stats img {
       width: 20px;
@@ -88,6 +90,18 @@
       width: 300px;
       height: 170px;
       border-radius: 10px;
+    }
+    @media (max-width: 768px) {
+      .stats {
+        position: static;
+        margin-top: 20px;
+        align-items: center;
+        background: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
     }
   </style>
 </head>
